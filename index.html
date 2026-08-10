@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title>Xxel — AM Premium by Axelle Revano</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
@@ -715,6 +715,224 @@
       opacity: 1;
       transform: translateY(0);
     }
+  
+/* =========================================================
+   iPHONE / MOBILE FIX
+   Tidak perlu zoom-out — layout mengikuti lebar layar asli.
+   ========================================================= */
+html {
+  width: 100%;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  nav {
+    width: 100%;
+    padding-left: max(18px, env(safe-area-inset-left));
+    padding-right: max(18px, env(safe-area-inset-right));
+    gap: 12px;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-cta {
+    padding: 9px 16px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: auto;
+    padding:
+      72px
+      max(18px, env(safe-area-inset-right))
+      56px
+      max(18px, env(safe-area-inset-left));
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    padding: 6px 13px;
+    font-size: 0.72rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero-title {
+    max-width: 100%;
+    font-size: clamp(4rem, 21vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-sub {
+    width: 100%;
+    max-width: 430px;
+    padding: 0 2px;
+    font-size: clamp(0.94rem, 4.2vw, 1.08rem);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 11px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    min-height: 52px;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 0.94rem;
+  }
+
+  .hero-scroll {
+    margin-top: 42px;
+  }
+
+  .stats-bar {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .stat-item {
+    min-width: 0;
+    flex: 1 1 50%;
+    padding: 24px 10px;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-num {
+    font-size: clamp(1.8rem, 8vw, 2.3rem);
+  }
+
+  .stat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.7px;
+    line-height: 1.35;
+  }
+
+  section {
+    width: 100%;
+    padding:
+      64px
+      max(18px, env(safe-area-inset-right))
+      64px
+      max(18px, env(safe-area-inset-left));
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 8.5vw, 2.5rem);
+    letter-spacing: -1.3px;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .section-sub {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  .product-wrapper,
+  .info-grid,
+  .testi-grid {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .product-card,
+  .product-info,
+  .info-card,
+  .testi-card,
+  .contact-box {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .contact-box {
+    padding: 28px 20px;
+  }
+
+  footer {
+    width: 100%;
+    padding:
+      32px
+      max(18px, env(safe-area-inset-right))
+      calc(32px + env(safe-area-inset-bottom))
+      max(18px, env(safe-area-inset-left));
+  }
+
+  .footer-links {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 20px;
+  }
+}
+
+/* iPhone kecil: 375px / 390px */
+@media (max-width: 390px) {
+  nav {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .nav-cta {
+    padding: 8px 13px;
+    font-size: 0.74rem;
+  }
+
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-badge {
+    font-size: 0.68rem;
+  }
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+  }
+}
+
   </style>
 </head>
 <body>
