@@ -933,7 +933,54 @@ img, svg, video, canvas {
   }
 }
 
-  </style>
+  
+/* FIX: bagian "Perkenalkan Axelle Revano" di iPhone */
+@media (max-width: 900px) {
+  #tentang > div > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  #tentang .reveal {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    transform: none;
+  }
+
+  #tentang .section-title,
+  #tentang .section-sub {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 600px) {
+  #tentang > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #tentang > div > div[style*="grid-template-columns"] {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 32px !important;
+  }
+
+  #tentang .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    letter-spacing: -1px;
+    line-height: 1.08;
+  }
+
+  #tentang .section-sub {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+}
+
+</style>
 </head>
 <body>
 
